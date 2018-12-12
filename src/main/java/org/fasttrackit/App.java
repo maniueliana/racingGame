@@ -4,10 +4,32 @@ package org.fasttrackit;
  * Hello world!
  *
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+
+public class App {
+    public static void main( String[] args ) {
+        //declaring a variable and instantiating a Car object
+        //this is also called initializing a variable
+        Car firstCompetitor = new Car();
+        firstCompetitor.name = "Dacia";
+        firstCompetitor.colour = "black";
+        firstCompetitor.doorCount = 5;
+        firstCompetitor.mileage = 9.5;
+
+        //local variables are variable declared inside a method
+        //they don't receive default values
+
+        Engine firstEngine = new Engine();
+        firstEngine.manufacturer = "Renault";
+
+        //sout prints a message yo the console
+        System.out.println(firstEngine.manufacturer);
+
+        firstCompetitor.engine = firstEngine;
+
+        firstCompetitor.engine.manufacturer = "BMW";
+
+        System.out.println(firstEngine.manufacturer);
+        System.out.println(firstCompetitor.engine.manufacturer);
+
     }
 }
