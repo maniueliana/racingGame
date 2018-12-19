@@ -1,6 +1,6 @@
 package org.fasttrackit;
 
-public class Car {
+public class Car extends AutoVehicle{
 
     //instance variables (declared as properties of a class
     //they receive default values (null for objects, 0 for numbers
@@ -13,4 +13,8 @@ public class Car {
     long totalKm;
     Engine engine;
 
+
+    public Car(Engine engine) {
+        super(engine);
+    }
 }

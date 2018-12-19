@@ -9,11 +9,11 @@ public class App {
     public static void main( String[] args ) {
         //declaring a variable and instantiating a Car object
         //this is also called initializing a variable
-        Car firstCompetitor = new Car();
-        firstCompetitor.name = "Dacia";
-        firstCompetitor.colour = "black";
+        Car firstCompetitor = new Car(new Engine());
+        firstCompetitor.setName("Dacia");
+        firstCompetitor.setColour("black");
         firstCompetitor.doorCount = 5;
-        firstCompetitor.mileage = 9.5;
+        firstCompetitor.setMileage(9.5);
 
         //local variables are variable declared inside a method
         //they don't receive default values
@@ -30,6 +30,10 @@ public class App {
 
         System.out.println(firstEngine.manufacturer);
         System.out.println(firstCompetitor.engine.manufacturer);
+
+
+        double traveledDistance = firstCompetitor.accelerate(100, 30);
+        System.out.println("Traveled distance"+ traveledDistance);
 
     }
 }
