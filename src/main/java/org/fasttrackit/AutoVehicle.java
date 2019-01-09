@@ -8,4 +8,10 @@ package org.fasttrackit;
         public AutoVehicle(Engine engine) {
             this.engine = engine;
         }
+
+        // constructor overloading
+      public AutoVehicle(){
+            this(new Engine());
+      }
+
     }
