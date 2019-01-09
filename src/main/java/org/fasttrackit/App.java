@@ -1,5 +1,7 @@
 package org.fasttrackit;
 
+import org.fasttrackit.cheater.CheatingCar;
+
 /**
  * Hello world!
  *
@@ -10,13 +12,23 @@ public class App {
 
         Engine engine = new Engine();
         engine.manufacturer = "Renault";
-        AutoVehicle autoVehicle = new AutoVehicle(engine);
 
-        new Car(engine);
+        System.out.println(engine);
 
-        Vehicle vehicle = new Vehicle();
-        double distance = vehicle.accelerate(99.9, 0.5);
+        CheatingCar cheatingCompetitor = new CheatingCar();
+        cheatingCompetitor.setName("Test1");
+        double distance = cheatingCompetitor.accelerate(70);
+        System.out.println("Cheating parcurge distanta de " + distance);
+    }
 
+
+//        AutoVehicle autoVehicle = new AutoVehicle(engine);
+//
+//        new Car(engine);
+//
+//        Vehicle vehicle = new Vehicle();
+//        double distance = vehicle.accelerate(99.9, 0.5);
+//
 
 //        //declaring a variable and instantiating a Car object
 //        //this is also called initializing a variable
@@ -47,20 +59,5 @@ public class App {
 //        System.out.println("Traveled distance"+ traveledDistance);
 //
 //
-        Vehicle vehicle = new Vehicle();
+   }
 
-        Vehicle.applicationTotalNumaberOfVehicles = 1;
-
-        System.out.println("Total from vehicle 1: "+ vehicle.applicationTotalNumaberOfVehicles);
-
-        Vehicle vehicle2 = new Vehicle();
-
-        Vehicle2.applicationTotalNumaberOfVehicles = 2;
-
-        System.out.println("Total from vehicle 2: "+ vehicle2.applicationTotalNumaberOfVehicles);
-
-        System.out.println("Total from vehicle 1: "+ vehicle.applicationTotalNumaberOfVehicles);
-
-
-    }
-}

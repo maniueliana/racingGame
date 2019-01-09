@@ -9,8 +9,8 @@ public class Vehicle {
     private double mileage;
     private long totalKm;
 
-    public Vehicle(){
-        aplicationTotalNumberVehicles++
+    public Vehicle() {
+        applicationTotalNumaberOfVehicles++;
 
     }
 
@@ -22,39 +22,56 @@ public class Vehicle {
         return distance;
     }
 
+    //method used just to demonstrate co-variant return types
+    public Vehicle returnSomeVehicule() {
+        return this;
+    }
+
     //method overloading
     public double accelerate(double speed) {
 
-        return accelerate(speed,1);
-
-
-    public String getName() { return name; }
-
-    public void setName(String name) {
-        this.name = name.trim();
+        return accelerate(speed, 1);
     }
 
-    public String getColour() {
-        return colour;
-    }
 
-    public void setColour(String colour) {
-        this.colour = colour;
-    }
 
-    public double getMileage() {
-        return mileage;
-    }
+        public String getName ()
+        {
+            return name;
+        }
 
-    public void setMileage(double mileage) {
-        this.mileage = mileage;
-    }
+        public void setName (String name)
+        {
+            this.name = name.trim();
+        }
 
-    public long getTotalKm() {
-        return totalKm;
-    }
+        public String getColour ()
+        {
+            return colour;
+        }
 
-    public void setTotalKm(long totalKm) {
-        this.totalKm = totalKm;
+        public void setColour (String colour)
+        {
+            this.colour = colour;
+        }
+
+        public double getMileage ()
+        {
+            return mileage;
+        }
+
+        public void setMileage ( double mileage)
+        {
+            this.mileage = mileage;
+        }
+
+        public long getTotalKm ()
+        {
+            return totalKm;
+        }
+
+        public void setTotalKm ( long totalKm)
+        {
+            this.totalKm = totalKm;
+        }
     }
-}
